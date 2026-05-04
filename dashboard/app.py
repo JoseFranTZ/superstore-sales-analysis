@@ -33,11 +33,11 @@ def run_sql(file: str) -> list[pd.DataFrame]:
 kpi         = run_sql("01_global_metrics.sql")[0]
 cat, subcat = run_sql("02_by_category.sql")
 discount    = run_sql("03_discount_impact.sql")[0]
-region, states = run_sql("04_by_region.sql")
-annual, monthly = run_sql("05_trends.sql")
-segment, shipmode = run_sql("06_by_segment.sql")
-prod_top, prod_bot, _ = run_sql("07_products.sql")
-cust_top, cust_dist = run_sql("08_customers.sql")
+region, states = run_sql("07_by_region.sql")
+annual, monthly, _, _ = run_sql("11_trends.sql")
+segment, shipmode = run_sql("05_by_segment.sql")
+prod_top, prod_bot, _ = run_sql("09_products.sql")
+cust_top, cust_dist = run_sql("10_customers.sql")
 
 # ── Colour palette ────────────────────────────────────────────────────────────
 BLUE      = "#2563EB"
